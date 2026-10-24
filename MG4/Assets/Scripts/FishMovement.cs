@@ -16,6 +16,11 @@ public class FishMovement : MonoBehaviour
         {
             movement.z = 1;
         }
+
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        {
+            movement.z = -1;
+        }
         // STEP 1 -------------------------------------------------------------
         // The below else if() statment currently ONLY checks for S KEY input.
         // Make this an OR statement (like the one above!) so that it also
@@ -23,10 +28,9 @@ public class FishMovement : MonoBehaviour
         // Key code reference: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/KeyCode.html 
         //
         // Feature 1 of the rubric should be complete after this.
-        else if (Input.GetKey(KeyCode.S))
-        {
-            movement.z = -1;
-        }
+        
+        //moved this if statement to below the W key one
+
         // STEP 1 -------------------------------------------------------------
 
         // STEP 2 -------------------------------------------------------------
@@ -41,8 +45,17 @@ public class FishMovement : MonoBehaviour
         //      move up and down? Is negative up or down? Is positive up or down?
         //
         // Feature 2 of the rubric should be complete after this.
-        
+        if (Input.GetKey(KeyCode.Q)) 
+        {
+            movement.y = 1;
 
+        }
+
+        else if (Input.GetKey(KeyCode.E))
+        {
+            movement.y = -1;
+
+        }
 
         // STEP 2 -------------------------------------------------------------
 
